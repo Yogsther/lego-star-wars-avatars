@@ -1,6 +1,28 @@
 var data = [
     { id: 0, name: "Qui-Gon Jinn" },
+    { id: 76, name: "Obi-Wan Kenobi" },
+    { id: 79, name: "TC-14" },
+    { id: 22, name: "Jar Jar Binks" },
+    { id: 47, name: "Queen Amidala" },
+    { id: 95, name: "Captain Panaka" },
+    { id: 100, name: "Padmé (Battle)" },
+    { id: 102, name: "R2-D2" },
+    { id: 138, name: "Anakin Skywalker (Boy)" },
     { id: 1, name: "Obi-Wan Kenobi (Jedi Master)" },
+    { id: 37, name: "R4-P17" },
+    { id: 40, name: "Anakin Skywalker (Padawan)" },
+    { id: 61, name: "Padmé (Geonosis) / Padmé (Clawed)" },
+    { id: 85, name: "C-3PO" },
+    { id: 63, name: "Mace Windu" },
+    { id: 86, name: "Yoda" },
+    { id: 64, name: "Obi-Wan Kenobi (Episode III)" },
+    { id: 75, name: "Anakin Skywalker (Jedi)" },
+    { id: 53, name: "Chancellor Palpatine" },
+    { id: 87, name: "Commander Cody" },
+    { id: 54, name: "Chewbacca" },
+    //end order
+
+    
     { id: 2, name: "Luke Skywalker (Hoth)" },
     { id: 3, name: "Ugnaught" },
     { id: 4, name: "Ewok" },
@@ -21,7 +43,7 @@ var data = [
     { id: 19, name: "Yoda (Ghost)" },
     { id: 20, name: "Luke Skywalker (Bespin)" },
     { id: 21, name: "Princess Leia (Bespin)" },
-    { id: 22, name: "Jar Jar Binks" },
+    
     { id: 23, name: "Princess Leia (Slave)" },
     { id: 24, name: "Princess Leia (Prisoner)" },
     { id: 25, name: "Bib Fortuna" },
@@ -30,39 +52,33 @@ var data = [
     { id: 28, name: "Dengar" },
     { id: 29, name: "4-LOM" },
     { id: 30, name: "R2-Q5" },
-    { id: 31, name: "Gungan Warrior" },
+    
     { id: 32, name: "Lando Calrissian" },
     { id: 33, name: "Princess Leia (Boushh)" },
     { id: 34, name: "Princess Leia (Endor)" },
     { id: 35, name: "Wicket" },
     { id: 36, name: "Gamorrean Guard" },
-    { id: 37, name: "R4-P17" },
+    
     { id: 38, name: "Bossk" },
     { id: 39, name: "Boba Fett" },
-    { id: 40, name: "Anakin Skywalker (Padawan)" },
+    
     { id: 41, name: "Indiania Jones" },
 
     { id: 44, name: "Lando (Palace Guard)" },
     { id: 45, name: "Luke Skywalker (Endor)" },
     { id: 46, name: "Darth Vader" },
-    { id: 47, name: "Queen Amidala" },
-    { id: 48, name: "Princess Leia (Boushh)" },
-    { id: 49, name: "Unknown" },
-    { id: 50, name: "Rancor" },
-    { id: 51, name: "ASP Droid" },
-    { id: 52, name: "R1-G4" },
-    { id: 53, name: "Chancellor Palpatine" },
-    { id: 54, name: "Chewbacca" },
+    
+    
+    
+    
     { id: 55, name: "Ben Kenobi" },
     { id: 56, name: "Han Solo (Endor)" },
     { id: 57, name: "Gonk Droid" },
     { id: 58, name: "Battle Droid (Security)" },
     { id: 59, name: "Droideka" },
-    { id: 60, name: "Scout Trooper" },
-    { id: 61, name: "Padmé (Geonosis) / Padmé (Clawed)" },
-    { id: 62, name: "Droid 2" },
-    { id: 63, name: "Mace Windu" },
-    { id: 64, name: "Obi-Wan Kenobi (Episode III)" },
+    
+    
+    
     { id: 65, name: "Princess Leia" },
     { id: 66, name: "Captain Antilles" },
     { id: 67, name: "Han Solo (Stormtrooper)" },
@@ -70,22 +86,21 @@ var data = [
     { id: 69, name: "Battle Droid" },
     { id: 70, name: "Captain Tarpals" },
     { id: 71, name: "Pit Droid" },
-    { id: 72, name: "Wampa" },
-    { id: 73, name: "Buzz Droid" },
+    
 
-    { id: 75, name: "Anakin Skywalker (Jedi)" },
-    { id: 76, name: "Obi-Wan Kenobi" },
+    
+    
     { id: 77, name: "Rebel Friend" },
     { id: 78, name: "Luke Skywalker (Stormtrooper)" },
-    { id: 79, name: "TC-14" },
+    
     { id: 80, name: "Battle Droid (Commander)" },
     { id: 81, name: "Boss Nass" },
     { id: 82, name: "Watto" },
     { id: 83, name: "Zam Wesell" },
-    { id: 84, name: "Treadwell Droid" },
-    { id: 85, name: "C-3PO" },
-    { id: 86, name: "Yoda" },
-    { id: 87, name: "Commander Cody" },
+    
+    
+    
+    
     { id: 88, name: "Luke Skywalker (Tatooine)" },
     { id: 89, name: "Han Solo" },
     { id: 90, name: "Han Solo (Hoth)" },
@@ -93,14 +108,14 @@ var data = [
     { id: 92, name: "Royal Guard" },
     { id: 93, name: "Padmé" },
     { id: 94, name: "Darth Maul" },
-    { id: 95, name: "Captain Panaka" },
+    
     { id: 96, name: "Dexter Jettster" },
     { id: 97, name: "Clone" },
     { id: 98, name: "Geonosian" },
     { id: 99, name: "Super Battle Droid" },
-    { id: 100, name: "Padmé (Battl" },
+    
     { id: 101, name: "Aayla Secura" },
-    { id: 102, name: "R2-D2" },
+    
     { id: 103, name: "Clone (Episode III, Pilot)" },
     { id: 104, name: "Imperial Shuttle Pilot" },
     { id: 105, name: "Sandtrooper" },
@@ -133,11 +148,23 @@ var data = [
     { id: 135, name: "Clone (Episode III)" },
     { id: 136, name: "Mace Windu (Episode III)" },
     { id: 137, name: "Stormtrooper" },
-    { id: 138, name: "Anakin Skywalker (Boy)" },
+    
     { id: 139, name: "Greedo" },
     { id: 140, name: "TIE Fighter Pilot" },
     { id: 141, name: "Rebel Trooper (Hoth)" },
-    { id: 43, name: "Womp Rat" },
+
     { id: 42, name: "STRANGER 1" },
+    { id: 31, name: "Gungan Warrior" },
+    { id: 43, name: "Womp Rat" },
+    { id: 48, name: "Princess Leia (Boushh)" },
+    { id: 49, name: "Unknown" },
+    { id: 50, name: "Rancor" },
+    { id: 51, name: "ASP Droid" },
+    { id: 52, name: "R1-G4" },
+    { id: 60, name: "Scout Trooper" },
+    { id: 62, name: "Droid 2" },
+    { id: 72, name: "Wampa" },
+    { id: 73, name: "Buzz Droid" },
+    { id: 84, name: "Treadwell Droid" },
     { id: 74, name: "" }
 ];
