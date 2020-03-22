@@ -30,7 +30,7 @@ var selectedMode = 0;
 var starAmount = 0.5;
 var starSize = 15;
 var starMargin = 10;
-var starSpeed = 0.25;
+var starSpeed = 0.4;
 
 var stars = [];
 
@@ -50,8 +50,10 @@ window.onload = () => {
     chooseCharacter(selectedCharacter);
     setWidthOfSelection();
     summonStars();
-    drawBackground();
     updateMode();
+    setInterval(() => {
+        drawBackground();
+    }, 1000 / 30);
     controlpanel.style.visibility = "visible";
 };
 
@@ -134,15 +136,23 @@ function getIndex(id) {
 }
 
 function chooseCharacter(id) {
-    console.log("Choose character " + id);
     name.innerText = data[getIndex(id)].name;
     selectedCharacter = id;
     profile.src = generateProfile(selectedCharacter, selectedColor);
 }
 
 function setWidthOfSelection() {
+    var body = document.body,
+        html = document.documentElement;
+
+    var height = Math.max(
+        body.scrollHeight,
+        body.offsetHeight,
+        html.clientHeight
+    );
+
     background.width = window.innerWidth;
-    background.height = window.innerHeight;
+    background.height = height;
 
     summonStars();
 
@@ -164,8 +174,6 @@ function drawBackground() {
         bctx.globalAlpha = star.instensity;
         bctx.drawImage(starImage, star.x, star.y, size, size);
     }
-
-    requestAnimationFrame(drawBackground);
 }
 
 function summonStars() {
