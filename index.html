@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Star wars profile</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Star wars profile</title>
-	<link rel="stylesheet" href="style.css">
-</head>
+    <body>
+        <canvas id="background"></canvas>
 
-<body>
+        <img src="" alt="" id="profile-image" />
+        <span id="character-name">Loading...</span>
+        <div id="selection"></div>
+        <div id="control-panel">
+            <span class="clickable" id="mode">Background: ?</span>
+            <span
+                class="clickable"
+                id="download-button"
+                onclick="downloadProfile()"
+                >Download Image</span
+            >
+        </div>
 
-	<canvas id="background"></canvas>
-	<img src="" alt="" id="profile-image">
-	<span id="character-name"></span>
-	<div id="selection"></div>
-	<div id="control-panel"></div>
-
-	//<button onclick="exportProfile()">Save image</button>
-	<a id="download"></a>
-	<script src="characters.js"></script>
-	<script src="generator.js"></script>
-</body>
-
+        <a id="download"></a>
+        <script src="characters.js"></script>
+        <script src="main.js"></script>
+    </body>
 </html>

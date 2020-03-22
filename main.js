@@ -14,6 +14,8 @@ const starImage = new Image();
 const selection = document.getElementById("selection");
 const profile = document.getElementById("profile-image");
 const name = document.getElementById("character-name");
+const controlpanel = document.getElementById("control-panel");
+const mode = document.getElementById("mode");
 
 const download = document.getElementById("download");
 
@@ -23,13 +25,17 @@ starImage.src = "star.png";
 
 var selectedCharacter = 0;
 var selectedColor = 0;
+var selectedMode = 0;
 
 var starAmount = 0.5;
 var starSize = 15;
 var starMargin = 10;
-var starSpeed = 0.5;
+var starSpeed = 0.25;
 
 var stars = [];
+
+const modes = ["stars", "transparent", "black"];
+const colors = ["blue", "green", "orange", "purple", "yellow"];
 
 class Star {
     constructor() {
@@ -45,7 +51,20 @@ window.onload = () => {
     setWidthOfSelection();
     summonStars();
     drawBackground();
+    updateMode();
+    controlpanel.style.visibility = "visible";
 };
+
+mode.onclick = () => {
+    selectedMode = (selectedMode + 1) % modes.length;
+    updateMode();
+};
+
+function updateMode() {
+    var modeText = modes[selectedMode].split("");
+    modeText[0] = modeText[0].toUpperCase();
+    mode.innerText = "Background: " + modeText.join("");
+}
 
 profile.onclick = () => {
     selectedColor = (selectedColor + 1) % 5;
@@ -78,7 +97,7 @@ function summonSelectionCharacters() {
     }
 }
 
-function downloadProfile(noBackground = false, blackBackground = false) {
+function downloadProfile() {
     let tempCanvas = document.createElement("canvas");
     let tctx = tempCanvas.getContext("2d");
     tempCanvas.width = 256;
@@ -86,12 +105,12 @@ function downloadProfile(noBackground = false, blackBackground = false) {
 
     tctx.clearRect(0, 0, 256, 256);
 
-    if (!noBackground) {
+    if (modes[selectedMode] == "stars") {
         var startX = background.width / 2 - 256 / 2;
         tctx.drawImage(background, startX, 20, 256, 256, 0, 0, 256, 256);
     }
 
-    if (blackBackground) {
+    if (modes[selectedMode] == "black") {
         tctx.fillStyle = "black";
         tctx.fillRect(0, 0, 256, 256);
     }
@@ -102,7 +121,9 @@ function downloadProfile(noBackground = false, blackBackground = false) {
 
     download.innerHTML = "";
     download.href = tempCanvas.toDataURL();
-    download.download = "test.png";
+    download.download = `${data[getIndex(selectedCharacter)].name
+        .replace(/[\W_]+/g, "_")
+        .toLowerCase()}_${colors[selectedColor]}_${modes[selectedMode]}.png`;
     download.click();
 }
 
